@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>	Nimona·Catálogo de Dulces</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  body {
+    font-family: "Verdana", sans-serif;
+    margin: 0;
+    background-image: url("https://i.pinimg.com/736x/0b/a0/78/0ba078cad43b6a821e1fee1871f9c8e5.jpg"); /* Fondo llamativo */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #a53e48;
+	line-height: 1.5;
+  }
+
+  /* ----- BARRA SUPERIOR ----- */
+  nav {
+    background: #ffc7ef;
+    padding: 15px 40px;
+    border-bottom: 4px solid #f06cb4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav h1 {
+    color: #954a2d;
+    margin: 0;
+    font-size: 28px;
+    font-style: italic;
+  }
+
+  nav span {
+    font-weight: bold;
+    color: #954a2d;
+    font-size: 14px;
+  }
+  .banner {
+    background: #f697c1;
+    color: #a53e48;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .banner h2 {
+    font-size: 40px;
+    margin: 0 0 10px 0;
+  }
+
+  .banner p {
+    font-size: 18px;
+    margin: 0;
+    opacity: 0.9;
+  }
+  .contenedor-lista {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .producto-fila {
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .producto-fila img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f4acb7;
+    margin-right: 25px;
+  }
+
+  .info-prod h3 {
+    margin: 0 0 5px 0;
+    color: #954a2d;
+    font-size: 22px;
+  }
+
+  .info-prod p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .seccion-catalogo {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .seccion-catalogo h2 {
+    color: #954a2d;
+    font-size: 26px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #954a2d; 
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+
+  .catalogo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .producto-mini {
+    background: white;
+    border: 1px solid #ffae2b;
+    width: 200px; 
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+
+  .producto-mini:hover {
+    transform: scale(1.03);
+    border-color: #ffcad4;
+  }
+
+  .producto-mini img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .producto-mini h4 {
+    margin: 10px 0 5px 0;
+    color: #954a2d;
+    font-size: 16px;
+  }
+
+  .precio {
+    color: #f4acb7;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+  }
+
+  .contacto-seccion {
+    background: #ffcad4;
+    color: #5ce1e6;
+    padding: 40px 20px;
+    margin-top: 60px;
+  }
+
+  .contenedor-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contenedor-form h2 {
+    text-align: center;
+    color: #954a2d;
+    margin-bottom: 30px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #954a2d;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    background: #ffeba3;
+    color: #a53e48;
+    font-family: "Verdana", sans-serif;
+  }
+
+  button {
+    background: #ffae2b;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  button:hover {
+    background: #ffbb4d;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #f4acb7;
+    color: #f06cb4;
+    font-size: 12px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>Nimona</h1>
+  <span>Pagina Oficial&nbsp;Nimona</span>
+</nav>
+
+<div class="banner">
+  <h2>El regalo Perfecto</h2>
+  <p>en cada sorbo de chocolate.</p>
+</div>
+
+<div class="contenedor-lista">
+  <div class="producto-fila">
+    <img src="https://i.pinimg.com/1200x/8a/99/cd/8a99cdd90da69096b5dfeb447e0ada56.jpg" alt="Galletas">
+    <div class="info-prod">
+      <h3>Paquete Normal</h3> 
+      <p>Cuatro Bombas de Chocolate Grandes a tu gusto.</p>
+    </div>
+  </div>
+	
+
+  <div class="producto-fila">
+    <img src="https://i.pinimg.com/1200x/c8/2f/86/c82f862e4a2289d762ffd01c95a4d4b7.jpg" alt="Caketers">
+    <div class="info-prod">
+      <h3>Paquete Mini</h3>
+      <p>Seis bombas pequeñas de diferentes Sabores..</p>
+    </div>
+  </div>
+</div>
+
+<section class="seccion-catalogo">
+  <h2>Esta temporada.</h2>
+  
+  <div class="catalogo-grid">
+    <div class="producto-mini">
+      <img src="https://i.pinimg.com/1200x/c8/21/ed/c821ed03d0493ca2cea69b657e872353.jpg" alt="Galletas">
+      <h4>Dos Bombas clasicas de Chocolate</h4>
+      <span class="precio">$100.00</span>
+    </div>
+
+    <div class="producto-mini">
+      <img src="https://i.pinimg.com/1200x/3e/02/23/3e02235cf52c980f633809655dc97858.jpg" alt="Caja de galletas">
+      <h4>Cuatro Bombas Minis Clasicas</h4>
+      <span class="precio">$130.00</span>
+    </div>
+
+    <div class="producto-mini">
+      <img src="https://i.pinimg.com/1200x/d2/cf/f2/d2cff2f31d80154d2e938e252fc7b835.jpg" alt="Cajas de galletas">
+      <h4>Pieza Individul Grande&nbsp; &nbsp;</h4>
+      <span class="precio">$40.00</span>
+    </div>
+
+    <div class="producto-mini">
+      <img src="https://i.pinimg.com/1200x/35/c2/db/35c2db651ac64cda535db5c6bb7ff413.jpg" alt="Kit de galletas">
+      <h4>Dos Piezas Minis&nbsp;</h4>
+      <span class="precio">$30.00</span>
+    </div>
+  </div>
+</section>
+
+<section class="contacto-seccion">
+  <div class="contenedor-form">
+    <h2>Haz tu Pedido</h2>
+    
+    <form>
+      <label for="cliente">Nombre:</label>
+      <input type="text" id="cliente" required>
+
+      <label for="contacto">Correo Electronico:</label>
+      <input type="tel" id="contacto" required>
+
+      <label for="tipo">Espesificaciones:</label>
+      <select id="tipo">
+        <option>El mejor sabor</option>
+        <option>Catálogo de Sabores</option>
+        <option>Lo mas Popular</option>
+      </select>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+&nbsp; </footer>
+
+</body>
+</html>
